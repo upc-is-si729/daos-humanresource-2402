@@ -1,0 +1,39 @@
+<!-- Create and Edit Form -->
+<h4>{{ editMode ? 'Edit Country' : 'New Country' }}</h4>
+<div class="form-section">
+
+  <form (submit)="onSubmit()" #resourceForm='ngForm' class="form-row">
+    <mat-form-field>
+      <input matInput placeholder="Id" name="id" required [(ngModel)]="country.id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Name" name="name" required [(ngModel)]="country.name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Region" name="regionId" required [(ngModel)]="country.regionId" >
+        @for(region of regions; track region.name) {
+          <mat-option [value]="region.id">
+            {{ region.name }}
+          </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <ng-container>
+      @if (editMode === true) {
+        <button mat-raised-button color="primary">
+          <mat-icon>update</mat-icon> Update
+        </button>
+        <button mat-raised-button color="warn" (click)="onCancel()">
+          <mat-icon>cancel</mat-icon> Cancel
+        </button>
+      }
+      @else {
+        <button mat-raised-button color="primary">
+          <mat-icon>save</mat-icon> Add
+        </button>
+      }
+    </ng-container>
+  </form>
+
+</div>

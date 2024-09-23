@@ -1,0 +1,25 @@
+{
+  "filter": {
+    "label": "Filter",
+    "placeholder": "Enter text to filter"
+  },
+  "country": {
+    "title": "Country",
+    "datatable": {
+      "id": "ID",
+      "name": "Name",
+      "actions": "Actions"
+    }
+  },
+  "location": {
+    "title": "Location",
+    "datatable": {
+      "id": "ID",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "stateProvince": "State Province",
+      "actions": "Actions"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "filter": {
+    "label": "Filtrar",
+    "placeholder": "Digite texto a filtrar"
+  },
+  "country": {
+    "title": "Pais",
+    "datatable": {
+      "id": "ID",
+      "name": "Nombre",
+      "actions": "Acciones"
+    }
+  },
+  "location": {
+    "title": "Ubicación",
+    "datatable": {
+      "id": "ID",
+      "streetAddress": "Dirección",
+      "postalCode": "Código Postal",
+      "city": "Ciudad",
+      "stateProvince": "Estado Provincia",
+      "actions": "Acciones"
+    }
+  }
+}
