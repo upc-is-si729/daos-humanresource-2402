@@ -17,7 +17,7 @@
       <input matInput placeholder="State Province" name="stateProvince" required [(ngModel)]="location.stateProvince">
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Region" name="regionId" required [(ngModel)]="location.countryId" >
+      <mat-select placeholder="Country" name="countryId" required [(ngModel)]="location.countryId" >
         @for(country of countries; track country.name) {
           <mat-option [value]="country.id">
             {{ country.name }}

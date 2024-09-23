@@ -121,7 +121,6 @@ export class LocationManagementComponent implements OnInit, AfterViewInit {
         height: '400px',
         data: { location: this.locationData, countries: this.countriesData, editMode: this.isEditMode } });
     _matdialog.afterClosed().subscribe(() => {
-      console.log('Dialog closed');
       this.getAllResources();
     });
   }
