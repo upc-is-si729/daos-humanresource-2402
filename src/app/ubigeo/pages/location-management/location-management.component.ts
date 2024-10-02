@@ -11,9 +11,9 @@ import { NgClass } from "@angular/common";
 import { TranslateModule } from "@ngx-translate/core";
 import { LocationCreateAndEditComponent } from "../../components/location-create-and-edit/location-create-and-edit.component";
 import { Location } from "../../model/location.entity";
-import { CountriesService } from "../../../country/services/countries.service";
+import { CountriesService } from "../../services/countries.service";
 import { LocationService } from "../../services/location.service";
-import { Country } from "../../../country/model/country.entity";
+import { Country } from "../../model/country.entity";
 
 @Component({
   selector: 'app-location-management',

@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" >
+  @if (sidenavCollapsed() || sidenav().mode === 'over') {
+    <button mat-icon-button (click)="changeModeSidenav()" >
+      @if (sidenav().mode === 'over') {
+        <mat-icon>close</mat-icon>
+      } @else {
+        <mat-icon>menu</mat-icon>
+      }
+    </button>
+  }
+  <mat-icon matListItemIcon>diversity_3</mat-icon>
+  <span>{{title}}</span>
+  <span class="mat-spacer"></span>
+  @for(option of options(); track option.title) {
+    <a mat-button [routerLink]="option.path" routerLinkActive="active" #rla="routerLinkActive">
+      <mat-icon [fontSet]="rla.isActive ? 'material-icons':'material-icons-outlined'">
+        {{ option.icon }}
+      </mat-icon> {{ option.title }}
+    </a>
+  }
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+  <span>
+    <app-language-switcher/>
+  </span>
+</mat-toolbar>

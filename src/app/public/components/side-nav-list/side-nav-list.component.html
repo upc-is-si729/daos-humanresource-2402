@@ -1,0 +1,53 @@
+<div class="sidenav-header">
+  <img src="/assets/images/logo_upc.png" [style.width]="imgSize()" [style.height]="imgSize()" >
+  <div class="sidenav-text" [class.sidenav-text-hide]="sidenavCollapsed()">
+    <h5>DAOS - UPC</h5>
+  </div>
+</div>
+
+<mat-nav-list>
+  @for(option of options(); track option.title) {
+    <mat-list-item
+      (click)="option.subOptions ? onOpenAndCloseSubOption(option) : onChangeModeSidenav()"
+      [routerLink]="option.path"
+      routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive">
+
+      <mat-icon [fontSet]="rla.isActive ? 'material-icons':'material-icons-outlined'" matListItemIcon>
+        {{ option.icon }}
+      </mat-icon>
+      @if (!sidenavCollapsed()) {
+        <span matListItemTitle>{{ option.title }}</span>
+      }
+      @if (option.subOptions) {
+        <span matListItemMeta>
+          @if (optionOpened()) {
+            <mat-icon>expand_less</mat-icon>
+          } @else {
+            <mat-icon>expand_more</mat-icon>
+          }
+        </span>
+      }
+    </mat-list-item>
+
+    @if (option.subOptions && optionOpened()) {
+      <mat-nav-list @openSubOption>
+        @for(subOption of option.subOptions; track subOption.title) {
+          <mat-list-item
+            (click)="onChangeModeSidenav()"
+            [routerLink]="subOption.path"
+            routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive"
+            [class.sub-mat-list-item-start-space]="!sidenavCollapsed()" class="sub-mat-list-item-height">
+
+            <mat-icon [fontSet]="rla.isActive ? 'material-icons':'material-icons-outlined'" matListItemIcon >
+              {{ subOption.icon }}
+            </mat-icon>
+            @if (!sidenavCollapsed()) {
+              <span matListItemTitle>{{ subOption.title }}</span>
+            }
+          </mat-list-item>
+        }
+      </mat-nav-list>
+    }
+
+  }
+</mat-nav-list>

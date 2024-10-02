@@ -14,7 +14,7 @@ import {
 import { TranslateModule } from "@ngx-translate/core";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {Location} from "../../model/location.entity";
-import {Country} from "../../../country/model/country.entity";
+import {Country} from "../../model/country.entity";
 import {LocationService} from "../../services/location.service";
 
 @Component({

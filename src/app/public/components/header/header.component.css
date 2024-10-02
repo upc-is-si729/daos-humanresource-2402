@@ -1,0 +1,6 @@
+.mat-spacer {
+  flex: 1 1 auto;
+}
+.active {
+  background-color: var(--mat-list-active-indicator-color);
+}

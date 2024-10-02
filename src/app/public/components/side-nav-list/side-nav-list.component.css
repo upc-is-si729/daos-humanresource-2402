@@ -1,0 +1,28 @@
+.sidenav-header {
+  padding-top: 5px;
+  text-align: center;
+}
+.sidenav-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.sidenav-text h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.sidenav-text-hide {
+  display: none;
+}
+.selected-mat-list-item {
+  border-left: 5px solid var(--mat-list-active-indicator-color);
+}
+.sub-mat-list-item-start-space {
+  --mat-list-list-item-leading-icon-start-space: 32px;
+}
+.sub-mat-list-item-height {
+  --mdc-list-list-item-one-line-container-height: 40px;
+}
