@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from "./public/pages/home/home.component";
 import { AboutComponent } from "./public/pages/about/about.component";
 import { PageNotFoundComponent } from "./public/pages/page-not-found/page-not-found.component";
+import { DashboardManagementComponent } from "./dashboard/pages/dashboard-management/dashboard-management.component";
 
 export const routes: Routes = [
   { path: 'home',
@@ -10,6 +11,9 @@ export const routes: Routes = [
   },
   { path: 'about',
     component: AboutComponent
+  },
+  { path: 'dashboard',
+    component: DashboardManagementComponent
   },
   { path: 'ubigeo',
     loadChildren: () => import('./ubigeo/ubigeo.routes').then(m => m.ubigeoRoutes)

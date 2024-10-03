@@ -10,6 +10,10 @@ Run `npm install` to install all the dependencies of the project.
 
 Run `json-server --watch server/db.json --routes server/routes.json` to run the json-server.
 
+## Animate Chart.jss
+
+Run `npm install chart.js` to install the chart.js dependencies. To get more help on the chart.js go check out the [Chart.js](https://www.chartjs.org/docs/latest/) page.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

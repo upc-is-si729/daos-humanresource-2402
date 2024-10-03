@@ -47,6 +47,7 @@ export class SideNavListComponent {
 
   options = signal<SideNavOption[]>([
     { icon: 'home', path: '/home', title: 'Home'},
+    { icon: 'dashboard', path: '/dashboard', title: 'Dashboard'},
     { icon: 'info', path: '/ubigeo', title: 'Ubigeo',
       subOptions: [
         { icon: 'flag', path: '/ubigeo/countries', title: 'Countries'},
