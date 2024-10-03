@@ -1,0 +1,79 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.dashboard-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Width of the widget */
+  grid-auto-rows: 150px;  /* Height of the widget */
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mat-card-widget {
+  --mdc-elevated-card-container-shape: 16px;  /* Border radius of the widget */
+  --mdc-elevated-card-container-elevation: var(--mat-app-elevation-shadow-level-3); /* Elevation of the widget */
+  --mdc-elevated-card-container-color: white; /* Background color of the widget */
+}
+.mat-mdc-card {
+  border-radius: 16px;
+  box-shadow: var(--mat-app-elevation-shadow-level-3, none);
+  background-color: white;
+  color: inherit;
+}
+.widget-mini{
+  grid-area: span 1 / span 1;
+}
+.widget-small{
+  grid-area: span 1 / span 2;
+}
+.widget-medium{
+  grid-area: span 2 / span 2;
+}
+.widget-large{
+  grid-area: span 2 / span 3;
+}
+.widget-extra-large{
+  grid-area: span 3 / span 3;
+}
+
+.widget-light {
+  background-color: white;
+  color: inherit;
+  --mdc-icon-button-icon-color: var(--mat-icon-color, inherit);
+}
+.widget-indigo {
+  background-color: #3F51B5;
+  color: #ffffff;
+  --mdc-icon-button-icon-color: whitesmoke;
+}
+.widget-blue {
+  background-color: #005cbb;
+  color: #ffffff;
+  --mdc-icon-button-icon-color: whitesmoke;
+}
+.widget-dark {
+  background-color: #003f5c;
+  color: whitesmoke;
+  --mdc-icon-button-icon-color: whitesmoke;
+}
+
+.mat-mdc-card-header {
+  padding-bottom: 4px;
+}
+.mat-mdc-card-title {
+  font-size: 1.25rem;
+}
+.mat-mdc-card-content {
+  display: block;
+  padding: 0 16px 0 24px;
+  height: 100%;
+}
+
+.widget-button-settings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
